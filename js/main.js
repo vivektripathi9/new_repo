@@ -52,29 +52,23 @@
     }, 4000);
   }
 
-  /* ——— Overview slider ——— */
-  const ovSlides = $$("#overviewSlider .ov-slide");
-  let ovIndex = 0;
-
-  function showOv(i) {
-    ovSlides.forEach((s, n) => s.classList.toggle("active", n === i));
-  }
-
-  $(".ov-prev")?.addEventListener("click", () => {
-    ovIndex = (ovIndex - 1 + ovSlides.length) % ovSlides.length;
-    showOv(ovIndex);
-  });
-
-  $(".ov-next")?.addEventListener("click", () => {
-    ovIndex = (ovIndex + 1) % ovSlides.length;
-    showOv(ovIndex);
-  });
-
-  if (ovSlides.length > 1) {
-    setInterval(() => {
-      ovIndex = (ovIndex + 1) % ovSlides.length;
-      showOv(ovIndex);
-    }, 5000);
+  /* ——— Scroll reveal ——— */
+  const revealEls = $$(".reveal");
+  if (revealEls.length && "IntersectionObserver" in window) {
+    const revealObs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            revealObs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+    );
+    revealEls.forEach((el) => revealObs.observe(el));
+  } else {
+    revealEls.forEach((el) => el.classList.add("is-visible"));
   }
 
   /* ——— Location tabs ——— */
@@ -151,7 +145,6 @@
     showToast();
   }
 
-  $("#leadForm")?.addEventListener("submit", handleForm);
   $$(".js-form").forEach((f) => f.addEventListener("submit", handleForm));
 
   /* ——— Lightbox ——— */

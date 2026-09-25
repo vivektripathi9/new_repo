@@ -9,23 +9,22 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- Top desktop nav -->
-  <nav class="top-nav desktop-only" aria-label="Primary">
-    <a href="#home"><img src="assets/svg/site/home.svg" alt="" /> Home</a>
-    <a href="#pricing"><img src="assets/svg/site/price.svg" alt="" /> Price</a>
-    <a href="#sitefloorplan"><img src="assets/svg/site/multipurposehall.svg" alt="" /> Site &amp; Floor Plan</a>
-    <a href="#amenities"><img src="assets/svg/site/amenities.svg" alt="" /> Amenities</a>
-    <a href="#gallery"><img src="assets/svg/site/mail.svg" alt="" /> Gallery</a>
-    <a href="#location"><img src="assets/svg/site/location.svg" alt="" /> Location</a>
-    <a href="#sitevisit"><img src="assets/svg/site/site-visit.svg" alt="" /> Virtual Site Visit</a>
-    <a href="#brochure" class="js-open-modal"><img src="assets/svg/site/bro-download.svg" alt="" /> Brochure</a>
-  </nav>
-
-  <!-- Header -->
+  <div class="site-col">
+  <!-- Header / Navbar -->
   <header class="header" id="home">
     <a href="#home" class="logo">
       <img src="assets/images/logos.jpg" alt="Godrej Properties - Authorised Channel Partner" />
     </a>
+    <nav class="main-nav desktop-only" aria-label="Primary">
+      <a href="#home" class="nav-home" title="Home"><img src="assets/svg/site/home.svg" alt="Home" /></a>
+      <a href="#pricing"><img src="assets/svg/site/price.svg" alt="" /> Price</a>
+      <a href="#sitefloorplan"><img src="assets/svg/site/multipurposehall.svg" alt="" /> Site &amp; Floor Plan</a>
+      <a href="#amenities"><img src="assets/svg/site/amenities.svg" alt="" /> Amenities</a>
+      <a href="#gallery"><img src="assets/svg/site/mail.svg" alt="" /> Gallery</a>
+      <a href="#location"><img src="assets/svg/site/location.svg" alt="" /> Location</a>
+      <a href="#sitevisit"><img src="assets/svg/site/site-visit.svg" alt="" /> Virtual Site Visit</a>
+      <a href="#brochure" class="js-open-modal"><img src="assets/svg/site/bro-download.svg" alt="" /> Brochure</a>
+    </nav>
     <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
       <img src="assets/svg/site/nav.svg" alt="" />
     </button>
@@ -54,126 +53,130 @@
 
   <main>
     <!-- Hero -->
-    <section class="hero">
+    <section class="hero" id="hero">
       <div class="hero-slider" id="heroSlider">
         <div class="slide active"><img src="assets/images/banner1.jpg" alt="Godrej Florenne Image 1" /></div>
         <div class="slide"><img src="assets/images/banner2.jpg" alt="Godrej Florenne Image 2" /></div>
         <div class="slide"><img src="assets/images/banner3.jpg" alt="Godrej Florenne Image 3" /></div>
       </div>
-      <div class="hero-content">
-        <span class="badge">New Launch</span>
-        <h1>Godrej Florenne</h1>
+      <div class="hero-card">
+        <span class="hero-badge">New Launch</span>
+        <h1 class="hero-title">Godrej Florenne</h1>
         <p class="hero-loc">At Whitefield, Bengaluru</p>
         <p class="hero-by">By Godrej Properties</p>
+        <div class="hero-ribbon">Access Limited-Edition Luxury At Whitefield</div>
+        <div class="hero-taglines">
+          <p class="hero-gold">Expansive Landscaped Greens Spaces</p>
+          <p>Rare Collection, Crafted for Elite Families</p>
+        </div>
+        <ul class="hero-highlights">
+          <li>Land Parcel : 20 Acres</li>
+          <li>Total Units : 242 Row Houses</li>
+          <li>Possession : Sept 2030</li>
+        </ul>
+        <p class="hero-type">4 &amp; 5 BHK Luxury Row Houses at</p>
+        <p class="hero-price">₹ 4.85 Cr* Onwards</p>
+        <button type="button" class="hero-cta js-open-modal">I am Interested</button>
+        <p class="hero-rera">RERA No : PRM/KA/RERA/1250/304/PR/150926/008942</p>
       </div>
     </section>
 
-    <!-- Promo ribbons -->
-    <div class="ribbons">
-      <div class="ribbon teal">Access Limited-Edition Luxury At Whitefield</div>
-      <div class="ribbon dark gold">Expansive Landscaped Greens Spaces</div>
-      <div class="ribbon dark">Rare Collection, Crafted for Elite Families</div>
-    </div>
-
-    <!-- Highlights -->
-    <section class="highlights">
-      <ul>
-        <li>Land Parcel : 20 Acres</li>
-        <li>Total Units : 242 Row Houses</li>
-        <li>Possession : Sept 2030</li>
-      </ul>
-    </section>
-
-    <!-- Price CTA + Form -->
-    <section class="lead-block">
-      <p class="lead-type">4 &amp; 5 BHK Luxury Row Houses at</p>
-      <p class="lead-price">₹ 4.85 Cr<span>*</span> Onwards</p>
-      <button type="button" class="btn btn-interested js-open-modal">I am Interested</button>
-      <p class="rera">RERA No : PRM/KA/RERA/1250/304/PR/150926/008942</p>
-
-      <form class="lead-form" id="leadForm" novalidate>
-        <div class="field">
-          <input type="text" name="name" placeholder="Name" required />
-        </div>
-        <div class="field">
-          <input type="tel" name="phone" placeholder="Mobile No" pattern="[0-9]{10}" required />
-        </div>
-        <div class="field">
-          <input type="email" name="email" placeholder="Email" required />
-        </div>
-        <label class="consent">
-          <input type="checkbox" checked required />
-          <span>I consent to the use of my provided data in accordance with the <a href="#privacy">privacy policy</a>.</span>
-        </label>
-        <button type="submit" class="btn btn-gradient">Register Now</button>
-      </form>
-    </section>
-
+    <div class="content-stack">
     <!-- Overview -->
-    <section class="section" id="overview">
-      <div class="section-label">Overview</div>
-      <h2 class="section-title green">Godrej Florenne - 4 &amp; 5 BHK Luxury Row Houses At Whitefield, Bengaluru</h2>
-      <div class="overview-slider" id="overviewSlider">
-        <div class="ov-slide active"><img src="assets/images/banner1.jpg" alt="Overview 1" /></div>
-        <div class="ov-slide"><img src="assets/images/banner2.jpg" alt="Overview 2" /></div>
-        <div class="ov-slide"><img src="assets/images/banner3.jpg" alt="Overview 3" /></div>
-        <button class="ov-prev" aria-label="Previous">&#10094;</button>
-        <button class="ov-next" aria-label="Next">&#10095;</button>
+    <section class="section overview-section reveal" id="overview">
+      <div class="overview-inner">
+        <div class="overview-content">
+          <h2 class="overview-title">
+            Godrej Florenne - 4 &amp; 5 BHK Luxury Row Houses<br />
+            <span>At Whitefield, Bengaluru</span>
+          </h2>
+          <p class="overview-text">
+            Godrej Florenne is an ultra-luxury, low-density gated community by Godrej Properties, situated off Soukya Road in the prime growth corridor of Off-Whitefield, East Bengaluru. Spanning across ~20 acres of lush landscaped greens, this exclusive private address features a limited collection of 242 ultra-premium row houses designed for high-end luxury living. Designed with opulent specifications, the residences offer expansive, light-filled interiors, private outdoor gardens, rooftop terraces, centralized air conditioning, and internal private elevators for seamless vertical living. The project is strategically positioned to offer excellent connectivity to major business parks like ITPL and EPIP Zone, the Kadugodi Metro Station (Purple Line), Whitefield Railway Station, Kempegowda International Airport via key express routes, as well as nearby international schools, shopping destinations, OMR, and Sarjapur Road.
+          </p>
+          <button type="button" class="btn-brochure-outline js-open-modal" id="brochure">
+            Download Brochure
+            <img src="assets/svg/site/bro-download.svg" alt="" />
+          </button>
+        </div>
+        <div class="overview-side-label" aria-hidden="true">Overview</div>
       </div>
-      <p class="overview-text">
-        Godrej Florenne is an ultra-luxury, low-density gated community by Godrej Properties, situated off Soukya Road in the prime growth corridor of Off-Whitefield, East Bengaluru. Spanning across ~20 acres of lush landscaped greens, this exclusive private address features a limited collection of 242 ultra-premium row houses designed for high-end luxury living. Designed with opulent specifications, the residences offer expansive, light-filled interiors, private outdoor gardens, rooftop terraces, centralized air conditioning, and internal private elevators for seamless vertical living. The project is strategically positioned to offer excellent connectivity to major business parks like ITPL and EPIP Zone, the Kadugodi Metro Station (Purple Line), Whitefield Railway Station, Kempegowda International Airport via key express routes, as well as nearby international schools, shopping destinations, OMR, and Sarjapur Road.
-      </p>
-      <button type="button" class="btn btn-gradient js-open-modal" id="brochure">
-        <img src="assets/svg/site/bro-download.svg" alt="" /> Download Brochure
-      </button>
     </section>
 
     <!-- Price -->
-    <section class="section" id="pricing">
-      <div class="section-label">Price</div>
-      <h2 class="section-heading">Godrej Florenne - Price</h2>
-      <div class="price-table-wrap">
-        <table class="price-table">
-          <thead>
-            <tr>
-              <th>Type</th>
-              <th>Area</th>
-              <th>Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>4 BHK Optima</td>
-              <td>3725 Sq.Ft</td>
-              <td>₹ 4.85 Cr* Onwards <button type="button" class="link-btn js-open-modal">Price Breakup</button></td>
-            </tr>
-            <tr>
-              <td>4 BHK Premia</td>
-              <td>4060 Sq.Ft</td>
-              <td>₹ 5.8 Cr* Onwards <button type="button" class="link-btn js-open-modal">Price Breakup</button></td>
-            </tr>
-            <tr>
-              <td>4 BHK Luxe</td>
-              <td>4515 Sq.Ft</td>
-              <td>₹ 6.55 Cr* Onwards <button type="button" class="link-btn js-open-modal">Price Breakup</button></td>
-            </tr>
-            <tr>
-              <td>5 BHK Luxe</td>
-              <td>5515 Sq.Ft</td>
-              <td>₹ 8.00 Cr* Onwards <button type="button" class="link-btn js-open-modal">Price Breakup</button></td>
-            </tr>
-          </tbody>
-        </table>
+    <section class="section price-section reveal" id="pricing">
+      <div class="price-inner">
+        <div class="price-main">
+          <div class="price-grid">
+            <div class="price-table-col">
+              <h2 class="price-title">Godrej Florenne - Price</h2>
+              <div class="price-table-wrap">
+                <table class="price-table">
+                  <thead>
+                    <tr>
+                      <th>Type</th>
+                      <th>Area</th>
+                      <th>Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>4 BHK Optima</td>
+                      <td>3725 Sq.Ft</td>
+                      <td>
+                        <div class="price-cell">
+                          <span class="price-amt">₹ 4.85 Cr* Onwards</span>
+                          <button type="button" class="btn-price-breakup js-open-modal">Price Breakup</button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>4 BHK Premia</td>
+                      <td>4060 Sq.Ft</td>
+                      <td>
+                        <div class="price-cell">
+                          <span class="price-amt">₹ 5.8 Cr* Onwards</span>
+                          <button type="button" class="btn-price-breakup js-open-modal">Price Breakup</button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>4 BHK Luxe</td>
+                      <td>4515 Sq.Ft</td>
+                      <td>
+                        <div class="price-cell">
+                          <span class="price-amt">₹ 6.55 Cr* Onwards</span>
+                          <button type="button" class="btn-price-breakup js-open-modal">Price Breakup</button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>5 BHK Luxe</td>
+                      <td>5515 Sq.Ft</td>
+                      <td>
+                        <div class="price-cell">
+                          <span class="price-amt">₹ 8.00 Cr* Onwards</span>
+                          <button type="button" class="btn-price-breakup js-open-modal">Price Breakup</button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="costing-col">
+              <h3 class="price-title costing-title">Costing Details</h3>
+              <a href="assets/svg/site/costing-details.webp" class="costing-card lightbox" data-gallery="costing">
+                <img src="assets/svg/site/costing-details.webp" alt="Godrej Florenne Costing Details" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="price-side-label" aria-hidden="true">Price</div>
       </div>
-      <h3 class="sub-heading">Costing Details</h3>
-      <a href="#" class="costing-card js-open-modal">
-        <img src="assets/svg/site/costing-details.webp" alt="Godrej Florenne Costing Plan" />
-        <span>Complete Costing Details</span>
-      </a>
     </section>
 
     <!-- Site & Floor Plans -->
-    <section class="section" id="sitefloorplan">
+    <section class="section reveal" id="sitefloorplan">
       <div class="section-label">Site Plans</div>
       <h2 class="section-heading">Godrej Florenne - MasterPlan</h2>
       <a href="assets/images/master-plan.jpg" class="plan-card lightbox" data-gallery="plans">
@@ -197,55 +200,59 @@
     </section>
 
     <!-- Amenities -->
-    <section class="section" id="amenities">
-      <div class="section-label">Amenities</div>
-      <h2 class="section-heading">Godrej Florenne - Amenities</h2>
-      <div class="amenities-grid">
-        <div class="amenity">
-          <img src="assets/svg/site/basketball-court.svg" alt="" />
-          <p>Basketball Court</p>
+    <section class="section amenities-section reveal" id="amenities">
+      <div class="amenities-inner">
+        <div class="amenities-main">
+          <h2 class="amenities-title">Godrej Florenne - Amenities</h2>
+          <div class="amenities-grid">
+            <div class="amenity">
+              <img src="assets/svg/site/basketball-court.svg" alt="" />
+              <p>Basketball Court</p>
+            </div>
+            <div class="amenity">
+              <img src="assets/svg/site/lawn.svg" alt="" />
+              <p>Lawn Terraces</p>
+            </div>
+            <div class="amenity">
+              <img src="assets/svg/site/gym.svg" alt="" />
+              <p>Clubhouse with Gymnasium</p>
+            </div>
+            <div class="amenity">
+              <img src="assets/svg/site/kidsplay.svg" alt="" />
+              <p>Kids Play Area</p>
+            </div>
+            <div class="amenity">
+              <img src="assets/svg/site/swimming-pool1.svg" alt="" />
+              <p>Swimming Pool</p>
+            </div>
+            <div class="amenity">
+              <img src="assets/svg/site/amphitheatre.svg" alt="" />
+              <p>Amphitheatre</p>
+            </div>
+            <div class="amenity">
+              <img src="assets/svg/site/jogging.svg" alt="" />
+              <p>Jogging Track</p>
+            </div>
+            <div class="amenity">
+              <img src="assets/svg/site/skateboard.svg" alt="" />
+              <p>Skating Rink</p>
+            </div>
+            <div class="amenity">
+              <img src="assets/svg/site/multipurposehall.svg" alt="" />
+              <p>Multipurpose Lawn</p>
+            </div>
+            <div class="amenity">
+              <img src="assets/svg/site/carparking.svg" alt="" />
+              <p>Surface Car Park - Turf Cells</p>
+            </div>
+          </div>
         </div>
-        <div class="amenity">
-          <img src="assets/svg/site/lawn.svg" alt="" />
-          <p>Lawn Terraces</p>
-        </div>
-        <div class="amenity">
-          <img src="assets/svg/site/gym.svg" alt="" />
-          <p>Clubhouse with Gymnasium</p>
-        </div>
-        <div class="amenity">
-          <img src="assets/svg/site/kidsplay.svg" alt="" />
-          <p>Kids Play Area</p>
-        </div>
-        <div class="amenity">
-          <img src="assets/svg/site/swimming-pool1.svg" alt="" />
-          <p>Swimming Pool</p>
-        </div>
-        <div class="amenity">
-          <img src="assets/svg/site/amphitheatre.svg" alt="" />
-          <p>Amphitheatre</p>
-        </div>
-        <div class="amenity">
-          <img src="assets/svg/site/jogging.svg" alt="" />
-          <p>Jogging Track</p>
-        </div>
-        <div class="amenity">
-          <img src="assets/svg/site/skateboard.svg" alt="" />
-          <p>Skating Rink</p>
-        </div>
-        <div class="amenity">
-          <img src="assets/svg/site/multipurposehall.svg" alt="" />
-          <p>Multipurpose Lawn</p>
-        </div>
-        <div class="amenity">
-          <img src="assets/svg/site/carparking.svg" alt="" />
-          <p>Surface Car Park - Turf Cells</p>
-        </div>
+        <div class="amenities-side-label" aria-hidden="true">Amenities</div>
       </div>
     </section>
 
     <!-- Gallery -->
-    <section class="section" id="gallery">
+    <section class="section reveal" id="gallery">
       <div class="section-label">Gallery</div>
       <h2 class="section-heading">Godrej Florenne - Gallery</h2>
       <div class="gallery-grid">
@@ -259,49 +266,59 @@
     </section>
 
     <!-- Location -->
-    <section class="section" id="location">
-      <div class="section-label">Location</div>
-      <h2 class="section-heading">Godrej Florenne - Location</h2>
-      <div class="loc-tabs" role="tablist">
-        <button type="button" class="loc-tab active" data-tab="map" role="tab">Map View</button>
-        <button type="button" class="loc-tab" data-tab="locmap" role="tab">Location Map</button>
-      </div>
-      <div class="loc-panels">
-        <div class="loc-panel active" id="tab-map">
-          <iframe
-            title="Whitefield Map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31104.744026439246!2d77.72145929614551!3d12.96590034031199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11f35d0dfc83%3A0x30cfa512d80115f9!2sWhitefield%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1784978727096!5m2!1sen!2sin"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            allowfullscreen
-          ></iframe>
+    <section class="section location-section reveal" id="location">
+      <div class="location-inner">
+        <div class="location-main">
+          <h2 class="location-title">Godrej Florenne - Location</h2>
+          <div class="location-grid">
+            <div class="location-map-col">
+              <div class="loc-tabs" role="tablist">
+                <button type="button" class="loc-tab active" data-tab="map" role="tab">Map View</button>
+                <button type="button" class="loc-tab" data-tab="locmap" role="tab">Location Map</button>
+              </div>
+              <div class="loc-panels">
+                <div class="loc-panel active" id="tab-map">
+                  <iframe
+                    title="Whitefield Map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31104.744026439246!2d77.72145929614551!3d12.96590034031199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11f35d0dfc83%3A0x30cfa512d80115f9!2sWhitefield%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1784978727096!5m2!1sen!2sin"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="loc-panel" id="tab-locmap">
+                  <a href="assets/images/location-map.jpg" class="lightbox" data-gallery="location">
+                    <img src="assets/images/location-map.jpg" alt="Godrej Florenne Location Map" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="location-advantage-col">
+              <h3 class="loc-advantage-title">Location Advantage</h3>
+              <ul class="loc-list">
+                <li><span class="check" aria-hidden="true">✓</span> Channasandra Metro Station - 15 Mins</li>
+                <li><span class="check" aria-hidden="true">✓</span> Whitefield Metro Station - 15 Mins</li>
+                <li><span class="check" aria-hidden="true">✓</span> Whitefield Railway Station - 15 Mins</li>
+                <li><span class="check" aria-hidden="true">✓</span> K.R. Puram Railway Station - 35 Mins</li>
+                <li><span class="check" aria-hidden="true">✓</span> Kempegowda International Airport - 55 Mins</li>
+                <li><span class="check" aria-hidden="true">✓</span> Manipal Hospital - 20 Mins</li>
+                <li><span class="check" aria-hidden="true">✓</span> MVJ Hospital - 20 Mins</li>
+                <li><span class="check" aria-hidden="true">✓</span> Bangalore Int. Academy - 8 Mins</li>
+                <li><span class="check" aria-hidden="true">✓</span> Delhi Public School (DPS) - 25 Mins</li>
+                <li><span class="check" aria-hidden="true">✓</span> National Public School (NPS) - 25 Mins</li>
+                <li><span class="check" aria-hidden="true">✓</span> Nexus Shantiniketan Mall - 25 Mins</li>
+                <li><span class="check" aria-hidden="true">✓</span> Park Square Mall - 25 Mins</li>
+                <li><span class="check" aria-hidden="true">✓</span> DMart (Hoskote) - 15 Mins</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="loc-panel" id="tab-locmap">
-          <a href="assets/images/location-map.jpg" class="lightbox" data-gallery="location">
-            <img src="assets/images/location-map.jpg" alt="Godrej Florenne Location Map" />
-          </a>
-        </div>
+        <div class="location-side-label" aria-hidden="true">Location</div>
       </div>
-      <h3 class="sub-heading">Location Advantage</h3>
-      <ul class="loc-list">
-        <li><span class="check">✓</span> Channasandra Metro Station - 15 Mins</li>
-        <li><span class="check">✓</span> Whitefield Metro Station - 15 Mins</li>
-        <li><span class="check">✓</span> Whitefield Railway Station - 15 Mins</li>
-        <li><span class="check">✓</span> K.R. Puram Railway Station - 35 Mins</li>
-        <li><span class="check">✓</span> Kempegowda International Airport - 55 Mins</li>
-        <li><span class="check">✓</span> Manipal Hospital - 20 Mins</li>
-        <li><span class="check">✓</span> MVJ Hospital - 20 Mins</li>
-        <li><span class="check">✓</span> Bangalore Int. Academy - 8 Mins</li>
-        <li><span class="check">✓</span> Delhi Public School (DPS) - 25 Mins</li>
-        <li><span class="check">✓</span> National Public School (NPS) - 25 Mins</li>
-        <li><span class="check">✓</span> Nexus Shantiniketan Mall - 25 Mins</li>
-        <li><span class="check">✓</span> Park Square Mall - 25 Mins</li>
-        <li><span class="check">✓</span> DMart (Hoskote) - 15 Mins</li>
-      </ul>
     </section>
 
     <!-- Virtual Site Tour -->
-    <section class="section" id="sitevisit">
+    <section class="section reveal" id="sitevisit">
       <div class="section-label">Virtual Site Tour</div>
       <div class="video-card js-open-modal">
         <img src="assets/images/virtual-tour.jpg" alt="Godrej Florenne Virtual Site Visit" />
@@ -310,17 +327,22 @@
     </section>
 
     <!-- Disclaimer / Footer -->
-    <footer class="footer" id="privacy">
+    <footer class="footer reveal" id="privacy">
       <p class="disclaimer">
-        Disclaimer : The information provided on this website is intended exclusively for informational purposes and should not be construed as an offer of services. This site is managed by a RERA authorized real estate agent. The pricing information presented on this website is subject to alteration without advance notification, and the assurance of property availability cannot be guaranteed. The images showcased on this website are for representational purposes only and may not accurately reflect the actual properties. We may share your data with Real Estate Regulatory Authority (RERA) registered Developers for further processing as necessary. Additionally, we may send updates and information to the mobile number or email address registered with us. The content, design, and information on this website are protected by copyright and other intellectual property rights. For accurate and up-to-date information regarding services, pricing, availability, and any other details, it is recommended to contact us directly through the provided contact information on this website. Thank you for visiting our website.
+        <strong>Disclaimer :</strong> The information provided on this website is intended exclusively for informational purposes and should not be construed as an offer of services. This site is managed by a RERA authorized real estate agent. The pricing information presented on this website is subject to alteration without advance notification, and the assurance of property availability cannot be guaranteed. The images showcased on this website are for representational purposes only and may not accurately reflect the actual properties. We may share your data with Real Estate Regulatory Authority (RERA) registered Developers for further processing as necessary. Additionally, we may send updates and information to the mobile number or email address registered with us. The content, design, and information on this website are protected by copyright and other intellectual property rights. For accurate and up-to-date information regarding services, pricing, availability, and any other details, it is recommended to contact us directly through the provided contact information on this website. Thank you for visiting our website.
       </p>
-      <p class="copy"><a href="#privacy">Privacy Policy</a><br />All Rights Reserved. © 2025</p>
+      <p class="copy">
+        <a href="#privacy">Privacy Policy</a><br />
+        All Rights Reserved. © 2025
+      </p>
     </footer>
+    </div><!-- /.content-stack -->
 
   </main>
+  </div><!-- /.site-col -->
 
-  <!-- Left side enquiry panel -->
-  <aside class="left-panel" aria-label="Enquiry form">
+  <!-- Sticky right enquiry panel (desktop) -->
+  <aside class="enquire-panel" aria-label="Enquiry form">
     <div class="lp-actions">
       <button type="button" class="lp-action js-open-modal">Organize Site Visit</button>
       <a href="https://wa.me/919019070070" class="lp-action" target="_blank" rel="noopener">
@@ -352,46 +374,44 @@
     <span>Organize Site Visit</span>
   </div>
 
-  <!-- Sticky bottom bar -->
-  <div class="sticky-bar">
-    <a href="https://wa.me/919019070070" class="sticky-wa" target="_blank" rel="noopener">
-      <i class="fa fa-whatsapp"></i> WhatsApp
-    </a>
-    <button type="button" class="sticky-enq js-open-modal">
-      <i class="fa fa-envelope-o"></i> Enquire
-    </button>
-    <a href="tel:+919019070070" class="sticky-call">
-      <i class="fa fa-phone"></i> Call Now
-    </a>
-  </div>
-
   <!-- Enquiry Modal -->
   <div class="modal" id="enquiryModal" hidden>
     <div class="modal-backdrop js-close-modal"></div>
     <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <button type="button" class="modal-close js-close-modal" aria-label="Close">&times;</button>
-      <img src="assets/images/logos.jpg" alt="Godrej Florenne Logo" class="modal-logo" />
-      <div class="promise">
-        <h3>We Promise</h3>
-        <div class="promise-row">
-          <div><img src="assets/svg/site/Instant-Call-Back.svg" alt="" /><span>Instant Call Back</span></div>
-          <div><img src="assets/svg/site/Free-Site-Visit.svg" alt="" /><span>Free Site Visit</span></div>
-          <div><img src="assets/svg/site/Unmatched-Price.svg" alt="" /><span>Unmatched Price</span></div>
+      <div class="modal-header">
+        <h3 class="modal-header-title">Brochure Download</h3>
+        <button type="button" class="modal-close js-close-modal" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-promise">
+          <h4>We Promise</h4>
+          <div class="promise-item">
+            <img src="assets/svg/site/Instant-Call-Back.svg" alt="" />
+            <span>Instant Call Back</span>
+          </div>
+          <div class="promise-item">
+            <img src="assets/svg/site/Free-Site-Visit.svg" alt="" />
+            <span>Free Site Visit</span>
+          </div>
+          <div class="promise-item">
+            <img src="assets/svg/site/Unmatched-Price.svg" alt="" />
+            <span>Unmatched Price</span>
+          </div>
+        </div>
+        <div class="modal-form-col">
+          <h4 id="modalTitle">Register here and Avail the <span class="red">BEST OFFERS!</span></h4>
+          <form class="modal-form js-form" novalidate>
+            <input type="text" name="name" placeholder="Name" required />
+            <input type="tel" name="phone" placeholder="Mobile No" required />
+            <input type="email" name="email" placeholder="Email Address" required />
+            <label class="consent">
+              <input type="checkbox" checked required />
+              <span>I consent to the use of my provided data in accordance with the privacy policy.</span>
+            </label>
+            <button type="submit" class="btn-download">Download Now</button>
+          </form>
         </div>
       </div>
-      <h4 id="modalTitle">Register here and Avail the <span class="red">BEST OFFERS!</span></h4>
-      <form class="modal-form js-form" novalidate>
-        <input type="text" name="name" placeholder="Name" required />
-        <input type="tel" name="phone" placeholder="Mobile No" required />
-        <label class="consent">
-          <input type="checkbox" checked required />
-          <span>I consent to the use of my provided data in accordance with the privacy policy.</span>
-        </label>
-        <button type="submit" class="btn btn-gradient">Get Instant Call Back</button>
-      </form>
-      <a href="tel:+919019070070" class="modal-phone">
-        <i class="fa fa-phone"></i> +91 9019070070
-      </a>
     </div>
   </div>
 
